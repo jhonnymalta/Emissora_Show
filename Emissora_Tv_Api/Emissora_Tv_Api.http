@@ -1,0 +1,6 @@
+@Emissora_Tv_Api_HostAddress = http://localhost:5102
+
+GET {{Emissora_Tv_Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

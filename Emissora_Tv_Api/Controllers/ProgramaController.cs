@@ -1,5 +1,6 @@
 ﻿using Emissora_Tv_Api.DTOs;
 using Emissora_Tv_Api.Interfaces;
+using Emissora_Tv_Api.RabbitMQSender;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,10 +11,11 @@ namespace Emissora_Tv_Api.Controllers
     public class ProgramaController : ControllerBase
     {
         private readonly IProgramaRepository _programaRepository;
-
-        public ProgramaController(IProgramaRepository programaRepository)
+        private readonly IRabbitMQMessageSender _rabbitMQSender;
+        public ProgramaController(IProgramaRepository programaRepository, IRabbitMQMessageSender rabbitMQSender)
         {
             _programaRepository = programaRepository;
+            _rabbitMQSender =rabbitMQSender;
         }
         [HttpGet("")]
         public async Task<ActionResult<IEnumerable<ProgramaDTO>>> BuscarTodos()
@@ -38,6 +40,7 @@ namespace Emissora_Tv_Api.Controllers
         {
             var result = await _programaRepository.Create(programa);
             if (result == null) return BadRequest();
+            _rabbitMQSender.SendMessage(programa, "NovosOuvintesQueue");
             return Ok(programa);
         }
 

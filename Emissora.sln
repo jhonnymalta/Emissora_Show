@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Emissora_Tv_Api", "Emissora
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Emissora.Tests", "Emissora.Tests\Emissora.Tests.csproj", "{2BB32FE8-0A45-4B82-875E-051CE7C649B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emissora_Radio_Api", "Emissora_Radio_Api\Emissora_Radio_Api.csproj", "{E2B3A9F7-5412-4A55-83B7-2075D8E13AFD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Emissora_Radio_Api", "Emissora_Radio_Api\Emissora_Radio_Api.csproj", "{E2B3A9F7-5412-4A55-83B7-2075D8E13AFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Integrations", "Integrations\Integrations.csproj", "{F4BB35B6-8E91-4CE5-8C3E-277E2070CEAF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{E2B3A9F7-5412-4A55-83B7-2075D8E13AFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E2B3A9F7-5412-4A55-83B7-2075D8E13AFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E2B3A9F7-5412-4A55-83B7-2075D8E13AFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4BB35B6-8E91-4CE5-8C3E-277E2070CEAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4BB35B6-8E91-4CE5-8C3E-277E2070CEAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4BB35B6-8E91-4CE5-8C3E-277E2070CEAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4BB35B6-8E91-4CE5-8C3E-277E2070CEAF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

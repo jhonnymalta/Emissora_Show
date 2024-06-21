@@ -1,5 +1,6 @@
 using Emissora_Tv_Api.Data;
 using Emissora_Tv_Api.Interfaces;
+using Emissora_Tv_Api.RabbitMQSender;
 using Emissora_Tv_Api.Repositories;
 using Microsoft.EntityFrameworkCore;
 
@@ -14,6 +15,7 @@ builder.Services.AddDbContext<AppDbTvContext>(options =>
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddScoped<IProgramaRepository, ProgramaRepository>();
+builder.Services.AddSingleton<IRabbitMQMessageSender, RabbitMQMessageSender>();
 builder.Services.AddControllers();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

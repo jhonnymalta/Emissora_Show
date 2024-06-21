@@ -5,7 +5,7 @@ namespace Emissora_Radio_Api.Data
 {
     public class AppDbRadioContext : DbContext
     {
-        public AppDbRadioContext(DbContextOptions options) : base(options) {}
+        public AppDbRadioContext(DbContextOptions<AppDbRadioContext> options) : base(options) {}
 
         public DbSet<Programa> Programas { get; set; }
     }

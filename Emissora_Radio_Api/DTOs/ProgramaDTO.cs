@@ -1,8 +1,10 @@
-﻿namespace Emissora_Radio_Api.DTOs
+﻿using Integrations;
+
+namespace Emissora_Radio_Api.DTOs
 {
-    public class ProgramaDTO
+    public class ProgramaDTO : BaseMessage
     {
-        public int Id { get; set; }
+        
         public string Nome { get; set; }
         public int Duracao { get; set; }
         public string Classificacao { get; set; }
